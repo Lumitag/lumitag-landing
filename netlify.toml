@@ -8,5 +8,5 @@
 [[headers]]
   for = "/api/get-license"
   [headers.values]
-    Access-Control-Allow-Origin = "https://lumitag.app"
+    Access-Control-Allow-Origin = "*"
     Access-Control-Allow-Methods = "GET"

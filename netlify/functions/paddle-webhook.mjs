@@ -129,7 +129,7 @@ export default async (req) => {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
-      from: 'LumiTag <noreply@lumitag.app>',
+      from: 'LumiTag <onboarding@resend.dev>',
       to: [email],
       subject: 'Your LumiTag Pro License Key',
       html,
