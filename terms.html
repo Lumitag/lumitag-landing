@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms of Service — LumiTag</title>
+  <meta name="description" content="LumiTag End User License Agreement. Terms governing the use of LumiTag photo tagging software.">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="screenshots/icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #fafafa; --bg-white: #ffffff; --text: #1a1a2e; --text-muted: #555;
+      --accent: #7c9a82; --accent-hover: #6b8a71; --dark: #1a1a2e;
+      --radius-btn: 8px; --max-w: 1120px;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', system-ui, -apple-system, sans-serif; color: var(--text); background: var(--bg); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    a { color: inherit; text-decoration: none; }
+    .container { max-width: var(--max-w); margin: 0 auto; padding: 0 24px; }
+
+    .nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(0,0,0,0.06); }
+    .nav .container { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+    .nav-logo { font-weight: 700; font-size: 1.35rem; color: var(--accent); }
+    .nav-links { display: flex; align-items: center; gap: 28px; }
+    .nav-links a { font-size: 0.9rem; font-weight: 500; color: var(--text-muted); transition: color 0.2s; }
+    .nav-links a:hover { color: var(--text); }
+    .nav-cta { display: inline-block; padding: 8px 20px; background: var(--accent); color: #fff; font-weight: 600; font-size: 0.85rem; border-radius: var(--radius-btn); transition: background 0.2s; }
+    .nav-cta:hover { background: var(--accent-hover); }
+    .nav-hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+    .nav-hamburger svg { width: 28px; height: 28px; stroke: var(--text); }
+
+    .footer { background: var(--dark); color: rgba(255,255,255,0.7); padding: 48px 0 32px; }
+    .footer-inner { display: flex; flex-direction: column; align-items: center; gap: 16px; text-align: center; }
+    .footer-links { display: flex; gap: 24px; flex-wrap: wrap; justify-content: center; }
+    .footer-links a { font-size: 0.85rem; transition: color 0.2s; }
+    .footer-links a:hover { color: #fff; }
+    .footer-copy { font-size: 0.8rem; margin-top: 8px; }
+    .footer-email { font-size: 0.82rem; color: rgba(255,255,255,0.5); }
+
+    .legal-content { max-width: 720px; margin: 0 auto; padding: 100px 24px 60px; }
+    .legal-content h1 { font-size: 2rem; font-weight: 700; margin-bottom: 8px; color: #1a1916; }
+    .legal-content .last-updated { font-size: 0.85rem; color: #6b7280; margin-bottom: 32px; }
+    .legal-content h2 { font-size: 1.25rem; font-weight: 600; margin-top: 32px; margin-bottom: 12px; color: #1a1916; }
+    .legal-content p, .legal-content li { font-size: 0.95rem; color: #4b5563; line-height: 1.7; }
+    .legal-content ul { padding-left: 20px; margin: 12px 0; }
+    .legal-content a { color: #6b8f5b; text-decoration: underline; }
+    .legal-content strong { color: #1a1916; }
+    .legal-content blockquote { border-left: 3px solid var(--accent); padding: 12px 16px; margin: 16px 0; background: rgba(124,154,130,0.06); border-radius: 0 6px 6px 0; }
+    .legal-content blockquote p { font-size: 0.9rem; color: #6b7280; }
+    .legal-content hr { border: none; border-top: 1px solid rgba(0,0,0,0.08); margin: 32px 0; }
+
+    @media (max-width: 639px) {
+      .nav-links { display: none; }
+      .nav-hamburger { display: block; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="container">
+      <a href="index.html" class="nav-logo"><img src="screenshots/icon.png" alt="" style="height:28px;vertical-align:middle;margin-right:8px;">LumiTag</a>
+      <div class="nav-links">
+        <a href="index.html#features">Features</a>
+        <a href="index.html#pricing">Pricing</a>
+        <a href="index.html#faq">FAQ</a>
+        <a href="https://github.com/Lumitag/lumitag/releases/latest" class="nav-cta">Download Free</a>
+      </div>
+      <button class="nav-hamburger" aria-label="Menu" onclick="document.querySelector('.nav-links').style.display=document.querySelector('.nav-links').style.display==='flex'?'none':'flex'">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </nav>
+
+  <div class="legal-content">
+    <h1>Terms of Service</h1>
+    <p class="last-updated">Last updated: April 25, 2026</p>
+
+    <p>This End User License Agreement ("Agreement") is between you ("User") and Piotr Adryjańczyk ("Author"), governing your use of Lumitag ("Software").</p>
+    <p>While this Agreement is between you and the Author regarding the use of the Software, the actual sale and payment processing are handled by our Merchant of Record, Paddle.com.</p>
+    <p>By installing or using the Software, you agree to this Agreement.</p>
+
+    <hr>
+
+    <h2>1. Grant of License</h2>
+    <p>The Author grants you a <strong>non-exclusive, non-transferable, revocable license</strong> to install and use the Software on <strong>one (1) computer</strong> for personal or commercial purposes.</p>
+    <ul>
+      <li><strong>Free tier</strong>: You may use the Software with a limit of 100 photos at no cost.</li>
+      <li><strong>Paid license</strong>: A valid license key removes the photo limit. One license = one user.</li>
+    </ul>
+    <blockquote><p><strong>PL</strong>: Autor udziela niewyłącznej, niezbywalnej licencji na użytkowanie Oprogramowania na jednym komputerze, do celów osobistych lub komercyjnych. Darmowa wersja: limit 100 zdjęć. Płatna licencja: 1 licencja = 1 użytkownik.</p></blockquote>
+
+    <h2>2. Restrictions</h2>
+    <p>You may <strong>not</strong>:</p>
+    <ul>
+      <li>Redistribute, sell, lease, or sublicense the Software</li>
+      <li>Reverse engineer, decompile, or disassemble the Software</li>
+      <li>Remove or alter any proprietary notices</li>
+      <li>Use the Software to build a competing product</li>
+    </ul>
+    <blockquote><p><strong>PL</strong>: Zabrania się redystrybucji, sprzedaży, sublicencjonowania, dekompilacji oraz inżynierii wstecznej Oprogramowania.</p></blockquote>
+
+    <h2>3. Intellectual Property</h2>
+    <p>The Software and all associated materials are the intellectual property of the Author. This Agreement does not transfer any ownership rights to you.</p>
+
+    <h2>4. Third-Party Components</h2>
+    <p>The Software includes open-source components listed in <code>THIRD_PARTY_LICENSES.txt</code> (included with the installation). Those components are governed by their respective licenses.</p>
+    <p>AI models are downloaded from HuggingFace at first launch and are subject to their own license terms.</p>
+
+    <h2>5. Disclaimer of Warranty</h2>
+    <p>To the maximum extent permitted by applicable law, the Software is provided <strong>"AS IS"</strong>, without warranty of any kind, express or implied, including but not limited to fitness for a particular purpose or non-infringement.</p>
+    <p>If you are a consumer, this disclaimer does not affect your statutory rights under the consumer protection laws of your jurisdiction.</p>
+    <blockquote><p><strong>PL</strong>: W maksymalnym zakresie dozwolonym przez prawo, Oprogramowanie dostarczane jest bez jakiejkolwiek gwarancji. Prawa konsumenckie wynikające z przepisów prawa pozostają nienaruszone.</p></blockquote>
+
+    <h2>6. Limitation of Liability</h2>
+    <p>To the maximum extent permitted by applicable law, the Author's total liability under this Agreement shall not exceed <strong>the amount you paid for the license</strong>.</p>
+    <p>If you are a consumer, this limitation does not affect your statutory rights under the consumer protection laws of your jurisdiction.</p>
+    <blockquote><p><strong>PL</strong>: Maksymalna odpowiedzialność autora ograniczona jest do kwoty zapłaconej za licencję. Prawa konsumenckie pozostają nienaruszone.</p></blockquote>
+
+    <h2>7. Termination</h2>
+    <p>This license is effective until terminated. It terminates automatically if you breach any term of this Agreement. Upon termination, you must uninstall the Software and destroy all copies.</p>
+    <p>The Author may also terminate this Agreement at any time with 30 days' written notice.</p>
+
+    <h2>8. Purchases and Refunds</h2>
+    <p>Purchases are processed by <strong>Paddle.com</strong> (Merchant of Record). Your right to withdraw from the purchase and request a refund is governed by Paddle's terms of service. For digital content (such as a license key), the right of withdrawal generally expires upon activation of the license, in accordance with EU Directive 2011/83/EU.</p>
+    <p>To request a refund or review your rights, please contact Paddle directly or email the Author.</p>
+    <blockquote><p><strong>PL</strong>: Zakupy obsługuje Paddle.com. Prawo do zwrotu reguluje regulamin Paddle. W przypadku produktów cyfrowych prawo do odstąpienia wygasa po aktywacji licencji.</p></blockquote>
+
+    <h2>9. Severability</h2>
+    <p>If any provision of this Agreement is held to be unenforceable or invalid, such provision will be changed and interpreted to accomplish its objectives to the greatest extent possible under applicable law, and the remaining provisions will continue in full force and effect.</p>
+
+    <h2>10. Changes to This Agreement</h2>
+    <p>The Author reserves the right to modify this Agreement at any time. Changes will be posted on the website. Continued use of the Software after updates constitutes acceptance of the new terms.</p>
+
+    <h2>11. Governing Law</h2>
+    <p>This Agreement is governed by the laws of <strong>the Republic of Poland</strong>. Any disputes shall be resolved by the courts of competent jurisdiction in Poland.</p>
+    <p>For EU consumers: this does not affect your statutory rights under the consumer protection laws of your country of residence.</p>
+
+    <h2>12. Contact</h2>
+    <p>Piotr Adryjańczyk<br>Łódź, Poland<br>Email: <a href="mailto:lumitag.app@proton.me">lumitag.app@proton.me</a></p>
+
+    <hr>
+
+    <p><em>By installing Lumitag, you acknowledge that you have read and agree to this Agreement.</em></p>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-links">
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms of Service</a>
+          <a href="refund.html">Refund Policy</a>
+          <a href="https://github.com/Lumitag/lumitag">GitHub</a>
+          <a href="mailto:lumitag.app@proton.me">Contact</a>
+        </div>
+        <div class="footer-email">lumitag.app@proton.me</div>
+        <div class="footer-copy">© 2026 Piotr Adryjańczyk</div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,12 @@
+[build]
+  publish = "."
+  functions = "netlify/functions"
+
+[functions]
+  node_bundler = "esbuild"
+
+[[headers]]
+  for = "/api/get-license"
+  [headers.values]
+    Access-Control-Allow-Origin = "https://lumitag.app"
+    Access-Control-Allow-Methods = "GET"

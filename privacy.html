@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — LumiTag</title>
+  <meta name="description" content="LumiTag Privacy Policy. How we handle data — your photos never leave your computer.">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="screenshots/icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #fafafa; --bg-white: #ffffff; --text: #1a1a2e; --text-muted: #555;
+      --accent: #7c9a82; --accent-hover: #6b8a71; --dark: #1a1a2e;
+      --radius-btn: 8px; --max-w: 1120px;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', system-ui, -apple-system, sans-serif; color: var(--text); background: var(--bg); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    a { color: inherit; text-decoration: none; }
+    .container { max-width: var(--max-w); margin: 0 auto; padding: 0 24px; }
+
+    .nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(0,0,0,0.06); }
+    .nav .container { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+    .nav-logo { font-weight: 700; font-size: 1.35rem; color: var(--accent); }
+    .nav-links { display: flex; align-items: center; gap: 28px; }
+    .nav-links a { font-size: 0.9rem; font-weight: 500; color: var(--text-muted); transition: color 0.2s; }
+    .nav-links a:hover { color: var(--text); }
+    .nav-cta { display: inline-block; padding: 8px 20px; background: var(--accent); color: #fff; font-weight: 600; font-size: 0.85rem; border-radius: var(--radius-btn); transition: background 0.2s; }
+    .nav-cta:hover { background: var(--accent-hover); }
+    .nav-hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+    .nav-hamburger svg { width: 28px; height: 28px; stroke: var(--text); }
+
+    .footer { background: var(--dark); color: rgba(255,255,255,0.7); padding: 48px 0 32px; }
+    .footer-inner { display: flex; flex-direction: column; align-items: center; gap: 16px; text-align: center; }
+    .footer-links { display: flex; gap: 24px; flex-wrap: wrap; justify-content: center; }
+    .footer-links a { font-size: 0.85rem; transition: color 0.2s; }
+    .footer-links a:hover { color: #fff; }
+    .footer-copy { font-size: 0.8rem; margin-top: 8px; }
+    .footer-email { font-size: 0.82rem; color: rgba(255,255,255,0.5); }
+
+    .legal-content { max-width: 720px; margin: 0 auto; padding: 100px 24px 60px; }
+    .legal-content h1 { font-size: 2rem; font-weight: 700; margin-bottom: 8px; color: #1a1916; }
+    .legal-content .last-updated { font-size: 0.85rem; color: #6b7280; margin-bottom: 32px; }
+    .legal-content h2 { font-size: 1.25rem; font-weight: 600; margin-top: 32px; margin-bottom: 12px; color: #1a1916; }
+    .legal-content p, .legal-content li { font-size: 0.95rem; color: #4b5563; line-height: 1.7; }
+    .legal-content ul { padding-left: 20px; margin: 12px 0; }
+    .legal-content a { color: #6b8f5b; text-decoration: underline; }
+    .legal-content strong { color: #1a1916; }
+    .legal-content hr { border: none; border-top: 1px solid rgba(0,0,0,0.08); margin: 32px 0; }
+
+    @media (max-width: 639px) {
+      .nav-links { display: none; }
+      .nav-hamburger { display: block; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="container">
+      <a href="index.html" class="nav-logo"><img src="screenshots/icon.png" alt="" style="height:28px;vertical-align:middle;margin-right:8px;">LumiTag</a>
+      <div class="nav-links">
+        <a href="index.html#features">Features</a>
+        <a href="index.html#pricing">Pricing</a>
+        <a href="index.html#faq">FAQ</a>
+        <a href="https://github.com/Lumitag/lumitag/releases/latest" class="nav-cta">Download Free</a>
+      </div>
+      <button class="nav-hamburger" aria-label="Menu" onclick="document.querySelector('.nav-links').style.display=document.querySelector('.nav-links').style.display==='flex'?'none':'flex'">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </nav>
+
+  <div class="legal-content">
+    <h1>Privacy Policy</h1>
+    <p class="last-updated">Last updated: April 25, 2026</p>
+
+    <p>This Privacy Policy explains how Piotr Adryjańczyk ("we", "Author") handles data in connection with Lumitag ("Software") and the website at lumitag.netlify.app.</p>
+
+    <hr>
+
+    <h2>1. Data Controller</h2>
+    <p>Piotr Adryjańczyk<br>Łódź, Poland<br>Email: <a href="mailto:lumitag.app@proton.me">lumitag.app@proton.me</a></p>
+
+    <h2>2. What Data We Collect</h2>
+    <p><strong>Desktop application</strong>: Lumitag runs <strong>entirely offline</strong>. It does not collect, transmit, or store any personal data. Your photos never leave your computer.</p>
+    <p><strong>Website</strong>: We may use cookieless analytics (e.g., Plausible Analytics) to collect anonymized usage data (page views, referrer, country). No personal data is collected through analytics. If you sign up for our newsletter, we collect your <strong>email address</strong>, which is processed by our newsletter provider Buttondown (<a href="https://buttondown.com/legal/privacy">https://buttondown.com/legal/privacy</a>).</p>
+    <p><strong>Purchases</strong>: All payments are processed by <strong>Paddle.com</strong> (Merchant of Record). Paddle collects your email and payment information under their own <a href="https://www.paddle.com/legal/privacy">Privacy Policy</a>. We receive only your email address and transaction details for license fulfillment.</p>
+
+    <h2>3. Purpose of Processing</h2>
+    <ul>
+      <li><strong>Newsletter</strong>: To send product updates (only with your consent)</li>
+      <li><strong>Purchase</strong>: To fulfill the license agreement and provide support</li>
+    </ul>
+
+    <h2>4. Legal Basis (GDPR)</h2>
+    <ul>
+      <li>Newsletter: <strong>Your consent</strong> (Art. 6(1)(a) GDPR) — you can withdraw at any time</li>
+      <li>Purchase: <strong>Performance of a contract</strong> (Art. 6(1)(b) GDPR)</li>
+    </ul>
+
+    <h2>5. Third-Party Processors</h2>
+    <p>We use the following third-party services that may process your data:</p>
+    <ul>
+      <li><strong>Paddle.com</strong> (Netherlands) — payment processing, Merchant of Record</li>
+      <li><strong>Buttondown</strong> (USA) — newsletter delivery</li>
+    </ul>
+    <p>Where data is transferred outside the EEA (e.g., Buttondown in the USA), appropriate safeguards are in place in accordance with GDPR requirements.</p>
+
+    <h2>6. Data Retention</h2>
+    <ul>
+      <li><strong>Newsletter emails</strong>: Until you unsubscribe</li>
+      <li><strong>Purchase records</strong>: As required by Polish tax law (5 years)</li>
+    </ul>
+
+    <h2>7. Your Rights</h2>
+    <p>Under GDPR, you have the right to:</p>
+    <ul>
+      <li>Access your personal data</li>
+      <li>Rectify inaccurate data</li>
+      <li>Request deletion ("right to be forgotten")</li>
+      <li>Object to processing</li>
+      <li>Data portability</li>
+      <li>Withdraw consent at any time</li>
+    </ul>
+    <p>To exercise any of these rights, email <a href="mailto:lumitag.app@proton.me">lumitag.app@proton.me</a>.</p>
+
+    <h2>8. Cookies</h2>
+    <p>The website uses <strong>cookieless analytics</strong> (Plausible Analytics). No advertising or third-party tracking cookies are used. If cookie-based tools are added in the future, a consent banner will be displayed.</p>
+
+    <h2>9. Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time. Changes will be posted on this page with an updated date. Continued use of the website after changes constitutes acceptance.</p>
+
+    <h2>10. Contact</h2>
+    <p>Piotr Adryjańczyk<br>Łódź, Poland<br>Email: <a href="mailto:lumitag.app@proton.me">lumitag.app@proton.me</a></p>
+
+    <hr>
+
+    <p><em>If you have questions about this Privacy Policy, please contact us at <a href="mailto:lumitag.app@proton.me">lumitag.app@proton.me</a>.</em></p>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-links">
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms of Service</a>
+          <a href="refund.html">Refund Policy</a>
+          <a href="https://github.com/Lumitag/lumitag">GitHub</a>
+          <a href="mailto:lumitag.app@proton.me">Contact</a>
+        </div>
+        <div class="footer-email">lumitag.app@proton.me</div>
+        <div class="footer-copy">© 2026 Piotr Adryjańczyk</div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

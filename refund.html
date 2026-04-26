@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Refund Policy — LumiTag</title>
+  <meta name="description" content="LumiTag Refund Policy. Refunds are handled by Paddle, our Merchant of Record.">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="screenshots/icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #fafafa; --bg-white: #ffffff; --text: #1a1a2e; --text-muted: #555;
+      --accent: #7c9a82; --accent-hover: #6b8a71; --dark: #1a1a2e;
+      --radius-btn: 8px; --max-w: 1120px;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', system-ui, -apple-system, sans-serif; color: var(--text); background: var(--bg); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    a { color: inherit; text-decoration: none; }
+    .container { max-width: var(--max-w); margin: 0 auto; padding: 0 24px; }
+
+    .nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(0,0,0,0.06); }
+    .nav .container { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+    .nav-logo { font-weight: 700; font-size: 1.35rem; color: var(--accent); }
+    .nav-links { display: flex; align-items: center; gap: 28px; }
+    .nav-links a { font-size: 0.9rem; font-weight: 500; color: var(--text-muted); transition: color 0.2s; }
+    .nav-links a:hover { color: var(--text); }
+    .nav-cta { display: inline-block; padding: 8px 20px; background: var(--accent); color: #fff; font-weight: 600; font-size: 0.85rem; border-radius: var(--radius-btn); transition: background 0.2s; }
+    .nav-cta:hover { background: var(--accent-hover); }
+    .nav-hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+    .nav-hamburger svg { width: 28px; height: 28px; stroke: var(--text); }
+
+    .footer { background: var(--dark); color: rgba(255,255,255,0.7); padding: 48px 0 32px; }
+    .footer-inner { display: flex; flex-direction: column; align-items: center; gap: 16px; text-align: center; }
+    .footer-links { display: flex; gap: 24px; flex-wrap: wrap; justify-content: center; }
+    .footer-links a { font-size: 0.85rem; transition: color 0.2s; }
+    .footer-links a:hover { color: #fff; }
+    .footer-copy { font-size: 0.8rem; margin-top: 8px; }
+    .footer-email { font-size: 0.82rem; color: rgba(255,255,255,0.5); }
+
+    .legal-content { max-width: 720px; margin: 0 auto; padding: 100px 24px 60px; }
+    .legal-content h1 { font-size: 2rem; font-weight: 700; margin-bottom: 8px; color: #1a1916; }
+    .legal-content .last-updated { font-size: 0.85rem; color: #6b7280; margin-bottom: 32px; }
+    .legal-content h2 { font-size: 1.25rem; font-weight: 600; margin-top: 32px; margin-bottom: 12px; color: #1a1916; }
+    .legal-content p, .legal-content li { font-size: 0.95rem; color: #4b5563; line-height: 1.7; }
+    .legal-content ul { padding-left: 20px; margin: 12px 0; }
+    .legal-content a { color: #6b8f5b; text-decoration: underline; }
+    .legal-content strong { color: #1a1916; }
+    .legal-content hr { border: none; border-top: 1px solid rgba(0,0,0,0.08); margin: 32px 0; }
+
+    @media (max-width: 639px) {
+      .nav-links { display: none; }
+      .nav-hamburger { display: block; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="container">
+      <a href="index.html" class="nav-logo"><img src="screenshots/icon.png" alt="" style="height:28px;vertical-align:middle;margin-right:8px;">LumiTag</a>
+      <div class="nav-links">
+        <a href="index.html#features">Features</a>
+        <a href="index.html#pricing">Pricing</a>
+        <a href="index.html#faq">FAQ</a>
+        <a href="https://github.com/Lumitag/lumitag/releases/latest" class="nav-cta">Download Free</a>
+      </div>
+      <button class="nav-hamburger" aria-label="Menu" onclick="document.querySelector('.nav-links').style.display=document.querySelector('.nav-links').style.display==='flex'?'none':'flex'">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </nav>
+
+  <div class="legal-content">
+    <h1>Refund Policy</h1>
+    <p class="last-updated">Last updated: April 25, 2026</p>
+
+    <h2>Overview</h2>
+    <p>All LumiTag purchases are processed by <strong>Paddle.com</strong>, our Merchant of Record. Paddle handles billing, taxes, and refund processing on our behalf. Refund eligibility is determined by Paddle in accordance with their terms of service and applicable law.</p>
+
+    <h2>How to Request a Refund</h2>
+    <p>If you would like to request a refund, you can:</p>
+    <ul>
+      <li>Email us at <a href="mailto:lumitag.app@proton.me">lumitag.app@proton.me</a> with your order number</li>
+      <li>Contact Paddle directly through your purchase receipt or the <a href="https://www.paddle.com">Paddle dashboard</a></li>
+    </ul>
+    <p>Please include your order number or the email address used for the purchase.</p>
+
+    <h2>Processing Time</h2>
+    <p>Paddle typically processes refund requests within <strong>5–10 business days</strong>. The actual time for the refund to appear on your statement depends on your payment provider.</p>
+
+    <h2>After a Refund</h2>
+    <p>Once a refund is processed:</p>
+    <ul>
+      <li>Your Pro license key will be <strong>deactivated</strong></li>
+      <li>The free version of LumiTag (100 photos) continues to work normally</li>
+      <li>Any tags already written to your photos remain in the files</li>
+    </ul>
+
+    <h2>EU Consumer Rights</h2>
+    <p>If you are a consumer in the European Union, your rights under <strong>Directive 2011/83/EU</strong> apply. For digital content such as software license keys, the right of withdrawal expires once the digital content has been delivered and you have given your prior express consent to begin performance, acknowledging that you thereby lose your right of withdrawal.</p>
+    <p>This does not affect any additional refund rights provided by Paddle's terms of service.</p>
+
+    <h2>Contact</h2>
+    <p>Piotr Adryjańczyk<br>Łódź, Poland<br>Email: <a href="mailto:lumitag.app@proton.me">lumitag.app@proton.me</a></p>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-links">
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms of Service</a>
+          <a href="refund.html">Refund Policy</a>
+          <a href="https://github.com/Lumitag/lumitag">GitHub</a>
+          <a href="mailto:lumitag.app@proton.me">Contact</a>
+        </div>
+        <div class="footer-email">lumitag.app@proton.me</div>
+        <div class="footer-copy">© 2026 Piotr Adryjańczyk</div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
