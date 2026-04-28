@@ -42,7 +42,7 @@ export default async (req) => {
 
   // --- Sanitize ---
   const safe = (v, max) => String(v ?? 'unknown').slice(0, max);
-  const safeTail = (Array.isArray(log_tail) ? log_tail.join('\n') : String(log_tail ?? '')).slice(0, 10_000);
+  const safeTail = (Array.isArray(log_tail) ? log_tail.join('\n') : String(log_tail ?? '')).slice(0, 60_000);
   const safeModels = (Array.isArray(models) ? models.join(', ') : String(models ?? 'unknown')).slice(0, 200);
 
   // --- Build GitHub Issue ---
@@ -53,7 +53,7 @@ export default async (req) => {
     `**GPU tier**: ${safe(gpu_tier, 10)}`,
     `**Models**: ${safeModels}`,
     '',
-    '<details><summary>Log (last 100 lines)</summary>',
+    '<details><summary>Log tail</summary>',
     '',
     '```',
     safeTail,
