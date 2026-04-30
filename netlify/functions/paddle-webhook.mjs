@@ -1,5 +1,6 @@
 import { createHmac, createPrivateKey, sign, randomInt, timingSafeEqual } from 'node:crypto';
 import { getStore } from '@netlify/blobs';
+import nodemailer from 'nodemailer';
 
 export default async (req) => {
   if (req.method !== 'POST') {
@@ -96,7 +97,7 @@ export default async (req) => {
     return new Response('OK', { status: 200 });
   }
 
-  // --- Send email via Resend ---
+  // --- Send email via Gmail SMTP ---
   const html = `
 <!DOCTYPE html>
 <html><body style="margin:0;padding:0;font-family:system-ui,-apple-system,sans-serif;background:#f5f5f0">
@@ -122,21 +123,25 @@ export default async (req) => {
 </div>
 </body></html>`;
 
-  const emailRes = await fetch('https://api.resend.com/emails', {
-    method: 'POST',
-    headers: {
-      Authorization: `Bearer ${process.env.RESEND_API_KEY}`,
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-      from: 'LumiTag <onboarding@resend.dev>',
-      to: [email],
+  try {
+    const transporter = nodemailer.createTransport({
+      host: 'smtp.gmail.com',
+      port: 465,
+      secure: true,
+      auth: {
+        user: process.env.GMAIL_USER,
+        pass: process.env.GMAIL_APP_PASSWORD,
+      },
+    });
+
+    await transporter.sendMail({
+      from: 'LumiTag <lumitag.support@gmail.com>',
+      to: email,
       subject: 'Your LumiTag Pro License Key',
       html,
-    }),
-  });
-  if (!emailRes.ok) {
-    console.error('Resend API error:', emailRes.status, await emailRes.text());
+    });
+  } catch (e) {
+    console.error('SMTP send failed:', e.message);
     // Key is already in Blobs — user can still get it via polling
   }
 
