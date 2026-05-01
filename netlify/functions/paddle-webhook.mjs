@@ -39,7 +39,7 @@ export default async (req) => {
   }
 
   const secret = process.env.PADDLE_WEBHOOK_SECRET || '';
-  console.log('[WEBHOOK] Secret present:', !!secret, '| length:', secret.length);
+  console.log('[WEBHOOK] Secret present:', !!secret, '| length:', secret.length, '| starts:', secret.substring(0, 8));
 
   const signedPayload = `${ts}:${rawBody}`;
   const expected = createHmac('sha256', secret)
