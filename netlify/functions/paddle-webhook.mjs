@@ -103,8 +103,13 @@ export default async (req) => {
         payload += chars[randomInt(chars.length)];
       }
 
-      const pem = process.env.ED25519_PRIVATE_KEY?.replace(/\\n/g, '\n') || '';
-      console.log('[WEBHOOK] ED25519 key present:', !!pem, '| length:', pem.length);
+      const rawPem = process.env.ED25519_PRIVATE_KEY || '';
+      // Handle both literal \n and real newlines, and missing headers
+      let pem = rawPem.replace(/\\n/g, '\n').trim();
+      if (!pem.includes('-----BEGIN')) {
+        pem = `-----BEGIN PRIVATE KEY-----\n${pem}\n-----END PRIVATE KEY-----`;
+      }
+      console.log('[WEBHOOK] ED25519 key present:', !!rawPem, '| length:', rawPem.length, '| has headers:', pem.includes('-----BEGIN'));
 
       const key = createPrivateKey(pem);
       const signature = sign(null, Buffer.from(payload), key);
