@@ -1,6 +1,6 @@
 import { getStore } from '@netlify/blobs';
 
-export default async (req) => {
+export default async (req, context) => {
   if (req.method === 'OPTIONS') {
     return new Response('', { status: 204 });
   }
@@ -61,44 +61,52 @@ export default async (req) => {
     '</details>',
   ].join('\n');
 
-  const ghRes = await fetch(
-    'https://api.github.com/repos/Lumitag/lumitag/issues',
-    {
-      method: 'POST',
-      headers: {
-        Authorization: `Bearer ${process.env.GITHUB_ISSUES_TOKEN}`,
-        Accept: 'application/vnd.github.v3+json',
-        'Content-Type': 'application/json',
-        'User-Agent': 'lumitag-netlify-function',
-      },
-      body: JSON.stringify({
-        title: `[user-report] Lumitag ${safe(version, 30)}`,
-        body: issueBody,
-        labels: ['user-report'],
-      }),
+  // Return early — acknowledge receipt, create issue in background
+  const backgroundWork = (async () => {
+    try {
+      const ghRes = await fetch(
+        'https://api.github.com/repos/Lumitag/lumitag/issues',
+        {
+          method: 'POST',
+          headers: {
+            Authorization: `Bearer ${process.env.GITHUB_ISSUES_TOKEN}`,
+            Accept: 'application/vnd.github.v3+json',
+            'Content-Type': 'application/json',
+            'User-Agent': 'lumitag-netlify-function',
+          },
+          body: JSON.stringify({
+            title: `[user-report] Lumitag ${safe(version, 30)}`,
+            body: issueBody,
+            labels: ['user-report'],
+          }),
+        }
+      );
+
+      if (!ghRes.ok) {
+        console.error('GitHub API error:', ghRes.status, await ghRes.text());
+        return;
+      }
+
+      // Increment rate limit after success
+      try {
+        if (rateData) {
+          rateData.timestamps.push(Date.now());
+        } else {
+          rateData = { timestamps: [Date.now()] };
+        }
+        await store.set(rateKey, JSON.stringify(rateData));
+      } catch (e) {
+        console.warn('Rate limit update failed:', e.message);
+      }
+    } catch (e) {
+      console.error('Background issue creation failed:', e.message);
     }
-  );
+  })();
 
-  if (!ghRes.ok) {
-    console.error('GitHub API error:', ghRes.status, await ghRes.text());
-    return Response.json({ error: 'github_api_error' }, { status: 502 });
-  }
+  // Use waitUntil to keep function alive for background work
+  context.waitUntil(backgroundWork);
 
-  const issue = await ghRes.json();
-
-  // Increment rate limit only after success
-  try {
-    if (rateData) {
-      rateData.timestamps.push(Date.now());
-    } else {
-      rateData = { timestamps: [Date.now()] };
-    }
-    await store.set(rateKey, JSON.stringify(rateData));
-  } catch (e) {
-    console.warn('Rate limit update failed:', e.message);
-  }
-
-  return Response.json({ ok: true, issue_number: issue.number });
+  return Response.json({ ok: true, accepted: true });
 };
 
 export const config = { path: '/api/report-bug' };
